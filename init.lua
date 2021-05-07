@@ -1,7 +1,7 @@
 require('plenary.reload').reload_module('opts')
 require('plenary.reload').reload_module('packed')
 require('plenary.reload').reload_module('keymaps')
-require('plenary.reload').reload_module('lsp')
+-- require('plenary.reload').reload_module('lsp')
 require('plenary.reload').reload_module('complete')
 
 require("opts")
@@ -9,7 +9,6 @@ require("packed")
 require("keymaps")
 require("lsp")
 require("complete")
-
 
 vim.api.nvim_exec(
   [[
@@ -20,8 +19,8 @@ vim.api.nvim_exec(
   command! Q q
 
   let g:medieval_langs = ['python=python3', 'sh', 'console=bash', 'bash', 'octave', 'bc', 'sage']
-  nnoremap <Space><CR> :EvalBlock<CR>
-  nnoremap <Space>r :EvalBlock!<CR>
+  nnoremap <Leader><CR> :EvalBlock<CR>
+  nnoremap <Leader>r :EvalBlock!<CR>
 
   let $FZF_DEFAULT_COMMAND = ''
   nnoremap <silent> <Leader><Leader> :FZF -m<CR>

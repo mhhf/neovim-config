@@ -4,7 +4,7 @@ require('packer').startup(function(use)
 
   use 'nvim-lua/plenary.nvim'
 
-  use 'tomtom/tcomment_vim'
+  -- use 'tomtom/tcomment_vim'
 
   use 'mileszs/ack.vim'
   use { 'nvim-treesitter/nvim-treesitter',
