@@ -4,7 +4,7 @@ require('packer').startup(function(use)
 
   use 'nvim-lua/plenary.nvim'
 
-  -- use 'tomtom/tcomment_vim'
+   use 'tomtom/tcomment_vim'
 
   use 'mileszs/ack.vim'
   use { 'nvim-treesitter/nvim-treesitter',
@@ -23,20 +23,7 @@ require('packer').startup(function(use)
   use 'junegunn/fzf'
   use 'tpope/vim-fugitive'
   use 'kshenoy/vim-signature'
-  use { 'vimwiki/vimwiki',
-    config = function()
-      vim.g.vimwiki_folding = 'custom'
-      vim.g.vimwiki_key_mappings = {
-        all_maps = 0
-      }
-      vim.g.vimwiki_list = {
-            {
-                path = '~/doc/',
-                syntax = 'markdown',
-                ext = '.md',
-            }
-        }
-    end}
+  use 'vimwiki/vimwiki'
   use 'masukomi/vim-markdown-folding'
   use 'gpanders/vim-medieval'
 
@@ -55,6 +42,15 @@ require('packer').startup(function(use)
 end)
 
 vim.g.vsnip_snippet_dir = '$HOME/.config/nvim/vsnip'
+
+vim.g.vimwiki_folding = 'custom'
 vim.g.vimwiki_key_mappings =  {
-  all_maps = 0
+  all_maps = 1
+}
+vim.g.vimwiki_list = {
+    {
+        path = '~/doc/',
+        syntax = 'markdown',
+        ext = '.md',
+    }
 }

@@ -18,7 +18,6 @@ vim.api.nvim_exec(
   command! WQ wq
   command! Q q
 
-  let g:medieval_langs = ['python=python3', 'sh', 'console=bash', 'bash', 'octave', 'bc', 'sage']
   nnoremap <Leader><CR> :EvalBlock<CR>
   nnoremap <Leader>r :EvalBlock!<CR>
 
@@ -26,9 +25,24 @@ vim.api.nvim_exec(
   nnoremap <silent> <Leader><Leader> :FZF -m<CR>
   let g:fzf_layout = { 'down': '30%' }
 
+  " Undos
+  set undofile
+  set undodir=~/.vim/undodir
+
+  " Swap
   set noswapfile "DON'T CREATE SWAP FILES
   set nolazyredraw "Don't redraw while executing macros
 
   ]],
   true)
 
+vim.g.medieval_langs = {
+  'python=python3',
+  'haskell=evalghc',
+  'sh',
+  'console=bash',
+  'bash',
+  'octave',
+  'bc',
+  'sage'
+}

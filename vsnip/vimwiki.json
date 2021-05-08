@@ -2,5 +2,25 @@
   "log": {
     "prefix": ["log"],
     "body": "console.log(${1:$TM_SELECTED_TEXT});"
+  },
+  "uuid": {
+    "prefix": "uuid",
+    "body": [
+      "${VIM:system('python -c \"import uuid, sys;sys.stdout.write(str(uuid.uuid4()))\"')}"
+    ]
+  },
+  "python": {
+    "prefix": "python",
+    "body": [
+      "<!-- target: $1 -->",
+      "```python",
+      "$2",
+      "```",
+      "",
+      "<!-- name: $1 -->",
+      "```",
+      "```"
+    ]
+
   }
 }
