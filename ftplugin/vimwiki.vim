@@ -1,4 +1,4 @@
-autocmd BufWinEnter *.md setlocal foldexpr=StackedMarkdownFolds()
+autocmd BufWinEnter *.md setlocal foldexpr=NestedMarkdownFolds()
 autocmd BufWinEnter *.md setlocal foldmethod=expr
 " autocmd BufWinEnter *.md let b:current_syntax='markdown'
 "

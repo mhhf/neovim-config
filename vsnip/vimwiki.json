@@ -9,6 +9,19 @@
       "${VIM:system('python -c \"import uuid, sys;sys.stdout.write(str(uuid.uuid4()))\"')}"
     ]
   },
+  "sh": {
+    "prefix": "sh",
+    "body": [
+      "<!-- target: $1 -->",
+      "```sh",
+      "$2",
+      "```",
+      "",
+      "<!-- name: $1 -->",
+      "```",
+      "```"
+    ]
+  },
   "python": {
     "prefix": "python",
     "body": [
@@ -21,6 +34,18 @@
       "```",
       "```"
     ]
-
+  },
+  "haskell": {
+    "prefix": "haskell",
+    "body": [
+      "<!-- target: $1 -->",
+      "```haskell",
+      "main = ${2:print \"asd\"}",
+      "```",
+      "",
+      "<!-- name: $1 -->",
+      "```",
+      "```"
+    ]
   }
 }

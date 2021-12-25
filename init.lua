@@ -13,6 +13,8 @@ require("complete")
 vim.api.nvim_exec(
   [[
 
+  colorscheme jay
+
   command! W w
   command! Wq wq
   command! WQ wq
@@ -32,6 +34,11 @@ vim.api.nvim_exec(
   " Swap
   set noswapfile "DON'T CREATE SWAP FILES
   set nolazyredraw "Don't redraw while executing macros
+
+  set ignorecase
+  set smartcase
+
+  autocmd User NeomakeFinished :echo "Neomake Finished"
 
   ]],
   true)

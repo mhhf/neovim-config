@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
-vim.g.colors_name = 'jay'
+-- vim.g.colors_name = 'jay'
+-- require('jay').set()
 
 vim.wo.number = true
 
