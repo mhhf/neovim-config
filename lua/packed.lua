@@ -48,7 +48,7 @@ end)
 
 vim.g.vsnip_snippet_dir = '$HOME/.config/nvim/vsnip'
 
-vim.g.vimwiki_folding = 'custom'
+-- vim.g.vimwiki_folding = 'custom'
 vim.g.vimwiki_key_mappings =  {
   all_maps = 1
 }
